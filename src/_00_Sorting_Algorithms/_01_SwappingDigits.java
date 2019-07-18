@@ -44,7 +44,7 @@ class _01_SwappingDigits {
 				arr[number]=first;	
 			}
 			number++;
-			if(number<arrLength) {
+			if(number>=arrLength) {
 				number=1;
 			}
 			for(int j=0; j<arrLength; j++) {
@@ -58,6 +58,12 @@ class _01_SwappingDigits {
 	//   *Hint* it helps to sort it first.
 	//   *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		return 0;
+		int middleValue;
+		sortIntArray(arr);
+		int realLength=arr.length+1;
+		int middle=realLength/2;
+			middle-=.5;
+		middleValue=arr[middle];
+		return middleValue;
 	}
 }
