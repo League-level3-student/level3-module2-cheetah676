@@ -12,7 +12,7 @@ public class BubbleSorter extends Sorter{
 	void sort(int[] array, SortingVisualizer display) {
 			int saved;
 			for(int i=0; i<array.length-1; i++) {
-				for(int k=1; k<array.length-1; k++) {
+				for(int k=array.length-1; k>0; k--) {
 					if(array[k-1]>array[k]) {
 						saved=array[k-1];
 						array[k-1]=array[k];
