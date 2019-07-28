@@ -57,8 +57,8 @@ public class SortingVisualizer extends JLabel{
 	}
 	
 	public void updateDisplay() {
-		Color bk = Color.BLACK;
-		Color gr = Color.LIGHT_GRAY;
+		Color bk = Color.MAGENTA;
+		Color gr = Color.ORANGE;
 		Color c = bk;
 		for(int i = 0; i < WIDTH; i++) {
 			for(int j = 0; j < HEIGHT; j++) {
