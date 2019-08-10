@@ -31,7 +31,9 @@ if(low<high) {
             mergeSort(array, middle+1, high, display);
             //6. copy the elements from the array into the temporary array,
             //   but only the elements from low to high inclusive
-            tempArray=array;
+            for(int i=0; i<array.length; i++) {
+            	tempArray[i]=array[i];
+            }
             //7. create three integers called i, j, and k and
             //   set them equal to low, middle + 1, and low respectively
             int i=low;
@@ -39,7 +41,7 @@ if(low<high) {
             int k=low;
             //8. while i is less than or equal to middle
             //   and j is less than or equal to high
-            while(i<=middle && j<=high) {
+            while(i<=middle && j<=high) { 
             	//9. if temp array at i is less than or equal 
             	//   to temp array at j	
                 if(tempArray[i]<=tempArray[j]) {
@@ -57,7 +59,6 @@ if(low<high) {
                 }
                 //16. increase k by 1
                 k+=1;
-                display.updateDisplay();
             }
             
             //17. make a while loop that runs while i is less than or equal to middle
