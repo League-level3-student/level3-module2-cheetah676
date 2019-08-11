@@ -50,7 +50,7 @@ public class HeapSorter extends Sorter {
         //6. if r is less than n 
         //   and array element at r is greater than array element at largest
         //   then set largest equal to r
- if(r<n && array[r]<array[largest]) {
+ if(r<n && array[r]>array[largest]) {
 	 largest=r;
  }
         //7. if largest is not equal to i

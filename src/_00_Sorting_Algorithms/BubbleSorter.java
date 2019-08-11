@@ -17,10 +17,10 @@ public class BubbleSorter extends Sorter{
 						saved=array[k-1];
 						array[k-1]=array[k];
 						array[k]=saved;
-						display.updateDisplay();
+						//put display here for slow
 				}
 			}
-
 		}
+			display.updateDisplay();
 	}
 }
