@@ -18,19 +18,29 @@ class _04_SearchTest {
 		String values="bayleef";
 		assertEquals(1, _00_LinearSearch.linearSearch(stringss, values));
 		String [] stringsss={"who", "where", "when"};
-		String valuess="who";
-		assertEquals(0, _00_LinearSearch.linearSearch(stringsss, valuess));
+		String valuess="what";
+		assertEquals(-1, _00_LinearSearch.linearSearch(stringsss, valuess));
 	}
 	@Test
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
+		int [] int1= {1, 2, 3, 4, 5, 6};
+		int value1=4;
+		assertEquals(3, _01_BinarySearch.binarySearch(int1, 0, 5, value1));
+		int [] int2= {1, 2, 3, 4, 5, 6};
+		int value2=6;
+		assertEquals(5, _01_BinarySearch.binarySearch(int2, 0, 5, value2));
+		int [] int3= {2, 3, 6, 7, 15, 26};
+		int value3=15;
+		assertEquals(4, _01_BinarySearch.binarySearch(int3, 0, 5, value3));
 	}
 	
 	@Test
 	public void testInterpolationSearch() {
 		//3. use the assertEquals method to test your interpolation search method.
 		//   remember that the array must be sorted and evenly distributed
+		
 	}
 	
 	@Test

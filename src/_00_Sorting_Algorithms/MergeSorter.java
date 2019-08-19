@@ -59,6 +59,7 @@ if(low<high) {
                 }
                 //16. increase k by 1
                 k+=1;
+                display.updateDisplay();
             }
             
             //17. make a while loop that runs while i is less than or equal to middle
