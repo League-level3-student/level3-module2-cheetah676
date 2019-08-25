@@ -19,8 +19,10 @@ public class BubbleSorter extends Sorter{
 						array[k]=saved;
 						//put display here for slow
 				}
+					
 			}
+				display.updateDisplay();
 		}
-			display.updateDisplay();
+			//put here for instant sort
 	}
 }
