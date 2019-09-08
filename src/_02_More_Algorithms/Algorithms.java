@@ -46,17 +46,50 @@ public class Algorithms {
 			}
 		return false;
 	}
-	public static double sortScores(List <Double> results) {
+	public static List<Double> sortScores(List <Double> results) {
 		Double saved;
-		for(int i=0; i<results.size()-1; i++) {
-			for(int k=results.size()-1; k>0; k++) {
-				if(results.get(k-1)>results.get(k)) {
-					saved=results.get(k-1);
-					results.get(k-1)=results.get(k);
-					results.get(k)=saved;
+		for(int i=0; i<results.size(); i++) {
+			for(int k=0; k<results.size()-1; k++) {
+				if(results.get(k)>results.get(k+1)) {
+					saved=results.get(k);
+					results.set(k, results.get(k+1));
+					results.set(k+1, saved);
 				}
 			}
 		}
-		return 0;
+		return results;
+	}
+	public static List <String> sortDNA(List <String> sequenceBeingSorted){
+		String saved;
+		for(int i=0; i<sequenceBeingSorted.size(); i++) {
+			for(int k=0; k<sequenceBeingSorted.size()-1; k++) {
+				if(sequenceBeingSorted.get(k).length()>sequenceBeingSorted.get(k+1).length()) {
+					saved=sequenceBeingSorted.get(k);
+					sequenceBeingSorted.set(k, sequenceBeingSorted.get(k+1));
+					sequenceBeingSorted.set(k+1, saved);
+				}
+			}
+		}
+		return sequenceBeingSorted;
+	}
+	public static List <String> sortWords(List <String> words){
+		int positiveOrNegative;
+		String saved;
+		boolean swap = true;
+		while(swap) {
+			swap = false;
+			for(int k=0; k<words.size()-1; k++) {
+				positiveOrNegative=words.get(k).compareTo(words.get(k+1));
+					if(positiveOrNegative>0) {
+						saved=words.get(k);
+						words.set(k, words.get(k+1));
+						words.set(k+1, saved);
+						swap = true;
+					}
+					System.out.println(words);
+			}
+		}
+		return words;
+		
 	}
 }
